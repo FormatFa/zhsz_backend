@@ -52,14 +52,19 @@ pip install -r requirements.txt
 ## 初始化
 
 ### 1.配置数据库
-修改`settings.py`文件 设置 ，设置 MySQL 的 地址 和 用户名密码
+修改`settings.py`文件  
+设置 MySQL 的 地址 和 用户名密码
 
 ### 初始化数据库
 
 第一次运行执行下面命令创建对应的表
+
+```
 python manage.py db init
 python manage.py db migrate
 python manage.py db upgrade
+```
+
 
 
 ## 启动项目
