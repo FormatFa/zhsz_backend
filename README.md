@@ -1,39 +1,71 @@
-# zhsz_backend
-
-#### 介绍
-{**以下是码云平台说明，您可以替换此简介**
-码云是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
-
-#### 软件架构
-软件架构说明
+### Flask 后台
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
 
-#### 码云特技
+## 配置安装
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+### 前提:
+- 安装Python3
+- 安装pip
+- 设置pip源为阿里云的源(推荐)
+
+
+下面命令在工程根目录执行
+
+### 1. 创建虚拟环境
+```
+C:\Users\bigdata\Documents\zhsz\zhsz_flask>python -m venv venv
+
+Linux:
+[root@zhsz zhsz_flask]# python3 -m venv venv
+```
+使用PyCharm 或者 VSCode 等IDE ，就将工程的虚拟环境切换为刚才创建的虚拟环境(在工程根目录下)
+
+### 2. pip安装依赖所需依赖
+
+- 在终端里进入虚拟环境
+
+```
+windows 环境
+(venv) C:\Users\bigdata\Documents\zhsz\zhsz_flask>venv\Scripts\activate
+Linux 环境
+
+[root@zhsz zhsz_flask]# source venv/bin/activate
+(venv) [root@zhsz zhsz_flask]#
+```
+- 安装依赖
+```
+(venv) C:\Users\bigdata\Documents\zhsz\zhsz_flask>pip install -r requirements.txt
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/
+Collecting alembic==1.3.1 (from -r requirements.txt (line 1))
+  Using cached https://mirrors.aliyun.com/pypi/packages/84/64/493c45119dce700a4b9eeecc436ef9e8835ab67bae6414f040cdc7b58f4b/alembic-1.3.1.tar.gz
+Collecting astroid==2.3.3 (from -r requirements.txt (line 2))
+
+```
+ 阿里云源 安装 flask_bcrypt 可能会失败, 尝试临时切换成原来的
+
+
+
+## 初始化
+
+### 配置数据库
+修改settings.py文件 设置 ，设置 mysql的地址 和 用户名密码
+
+### 初始化数据库
+
+第一次运行执行下面命令
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
+
+### 启动
+
+
+python3  manage.py server
+
+
+
+### 修改维护
+生成requirements.txt
+pip freeze > requirements.txt

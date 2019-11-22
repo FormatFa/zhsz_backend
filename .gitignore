@@ -1,0 +1,16 @@
+/venv/
+*.pyc
+/CreateUser/controllers/__pycache__/auth.cpython-37.pyc
+/uploads/__pycache__/up.cpython-37.pyc
+/uploads/__pycache__/config.cpython-37.pyc
+/CreateUser/__pycache__/__init__.cpython-37.pyc
+/CreateUser/__pycache__/extensions.cpython-37.pyc
+/CreateUser/__pycache__/forms.cpython-37.pyc
+/CreateUser/__pycache__/models.cpython-37.pyc
+/CreateUser/controllers/__pycache__/__init__.cpython-37.pyc
+/CreateUser/controllers/__pycache__/auth.cpython-37.pyc
+/__pycache__/settings.cpython-37.pyc
+/migrations
+/.idea
+/.vscode
+
