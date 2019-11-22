@@ -65,6 +65,7 @@ def get_classes():
     '''
     results=[]
     for clazz in classes:
+        print(clazz)
         items =[ i for i in  re.split("(\d+)",clazz) if i!=""]
         print(items)
         if len(items)!=3:

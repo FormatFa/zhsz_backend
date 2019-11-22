@@ -36,7 +36,6 @@ def create_app():
     def load_user(uid):
         return User.query.get(uid)
 
-    #测试
     @app.route('/')
     def index():
         return redirect("index.html")
