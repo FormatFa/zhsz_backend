@@ -9,7 +9,7 @@ app=create_app()
 migrate=Migrate(app,db)
 
 manager=Manager(app=app)
-manager.add_command("server",Server(host='0.0.0.0'))
+manager.add_command("server",Server())
 manager.add_command("db",MigrateCommand)
 
 #自定义命令, 修改用户密码
