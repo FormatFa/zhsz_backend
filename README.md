@@ -2,11 +2,16 @@
 
 
 前端项目地址:
+
+Gitee:
 https://gitee.com/old_tree/zhszweb
+
+GitHub:
 https://github.com/FormatFa/zhszweb
 ## 项目配置安装
 
 ### 前提:
+- mysql数据库
 - 安装Python3
 - 安装pip
 - 设置pip源为阿里云的源(推荐)
