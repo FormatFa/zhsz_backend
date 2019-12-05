@@ -99,3 +99,4 @@ GitHub
 - [GitHub@FormatFa](https://github.com/FormatFa)
 - [GitHub@CattleHome](https://github.com/CattleHome)
 - [GitHub@old_tree](https://github.com/old-tree)
+- [GitHub@peterparker-bot](https://github.com/peterparker-bot)
