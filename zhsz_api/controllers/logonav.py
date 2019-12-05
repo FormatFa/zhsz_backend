@@ -219,14 +219,14 @@ def collage():
     # [('18云计算1', 5.73404255319149), ('18oracle', 5.531914893617022), ('17移动互联1', 5.027777777777778), ('18大数据2', 4.758196721311475), ('18云计算2', 4.458333333333333)]
     #top 50 student
     #zhijie na
-    temp = Bigtable.query.with_entities(Bigtable.style_id,Bigtable.stu_name,func.avg(Bigtable.human_art).label("score")).group_by(Bigtable.style_id,Bigtable.stu_name).order_by(desc(column("score"))).limit(50).all()
+    temp = Bigtable.query.with_entities(Bigtable.style_id,Bigtable.stu_name, func.round(func.avg(Bigtable.human_art),2).label("score")).group_by(Bigtable.style_id,Bigtable.stu_name).order_by(desc(column("score"))).limit(50).all()
     # print(temp)
 
 
     for key , name in indexnames.items():
         # column 
         col = getattr(Bigtable,key)
-        temp = filter_query.with_entities(Bigtable.gk_class,func.avg(col).label("score")).group_by(Bigtable.gk_class).order_by(desc(column("score"))).limit(5).all()    
+        temp = filter_query.with_entities(Bigtable.gk_class,func.round(func.avg(col),1).label("score")).group_by(Bigtable.gk_class).order_by(desc(column("score"))).limit(5).all()    
         classes = []
         students = []
         for i in temp:
@@ -234,7 +234,7 @@ def collage():
                 'name':i[0],
                 'score':i[1]
             })
-        temp = filter_query.with_entities(Bigtable.style_id,Bigtable.stu_name,func.avg(col).label("score")).group_by(Bigtable.style_id,Bigtable.stu_name).order_by(desc(column("score"))).limit(50).all()
+        temp = filter_query.with_entities(Bigtable.style_id,Bigtable.stu_name,func.round(func.avg(col),1).label("score")).group_by(Bigtable.style_id,Bigtable.stu_name).order_by(desc(column("score"))).limit(50).all()
         for i in temp:
             students.append({
                 'name':i[1],
