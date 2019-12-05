@@ -3,7 +3,7 @@
 
 前端项目地址:
 https://gitee.com/old_tree/zhszweb
-
+https://github.com/FormatFa/zhszweb
 ## 项目配置安装
 
 ### 前提:
