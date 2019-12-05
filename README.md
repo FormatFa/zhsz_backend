@@ -85,3 +85,17 @@ python manage.py db upgrade
 `pip freeze > requirements.txt`
 
 
+### 开发者
+
+Gitee
+
+- [Gitee@old_tree](https://gitee.com/old_tree)
+- [Gitee@calfhead_admin](https://gitee.com/calfhead_admin)
+- [Gitee@BigdataZW](https://gitee.com/BigdataZW)
+- [Gitee@FormatFa](https://gitee.com/FormatFa)
+- 
+GitHub
+
+- [GitHub@FormatFa](https://github.com/FormatFa)
+- [GitHub@CattleHome](https://github.com/CattleHome)
+- [GitHub@old_tree](https://github.com/old-tree)
