@@ -8,7 +8,7 @@ cryptography==2.8
 defusedxml==0.6.0
 Flask==1.1.1
 Flask-Bcrypt==0.7.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 Flask-Login==0.4.1
 Flask-Migrate==2.5.2
 Flask-OpenID==1.2.5
